@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
+import 'package:elearning/widgets/pdfreader.dart';
+import 'package:elearning/screeens/pdfscreens/uploadpdf.dart';
 import 'package:elearning/screeens/vidscreens/vidweb.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -73,13 +75,12 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                          builder: (context) => const Uploadpdf(),
+                        ));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MyHomePage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MyHomePage()));
                   },
                 ),
                 SizedBox(
