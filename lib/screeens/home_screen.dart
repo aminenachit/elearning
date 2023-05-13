@@ -1,9 +1,12 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:elearning/screeens/categories/droits.dart';
+import 'package:elearning/screeens/categories/langues.dart';
+import 'package:elearning/screeens/categories/mathematiques.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:elearning/constants/app_constants.dart';
-import 'package:elearning/screeens/informatiques.dart';
+import 'package:elearning/screeens/categories/informatiques.dart';
 import 'package:elearning/screeens/course_detail_screen.dart';
 import 'package:elearning/widgets/course_item.dart';
 import 'package:elearning/widgets/lecture_item.dart';
@@ -60,46 +63,41 @@ class HomeScreen extends StatelessWidget {
                     title: "COURS/TD\nTP",
                     startColor: 0xff9288e4,
                     endColor: 0xff534ea7,
-                    image: "assets/images/img_saly10.png"),
+                    image: "assets/images/info.png"),
                 CourseItem(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const CourseDetailScreen()));
+                              builder: (context) => const Math()));
                     },
                     headline: "MATHEMATIQUES",
                     title: "COURS/TD\nTP",
                     startColor: 0xff9288e4,
                     endColor: 0xff534ea7,
-                    image: "assets/images/img_saly10.png"),
+                    image: "assets/images/math.png"),
                 CourseItem(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const CourseDetailScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const Lan()));
                     },
                     headline: "LANGUES",
                     title: "COURS/TD\nTP",
                     startColor: 0xff9288e4,
                     endColor: 0xff534ea7,
-                    image: "assets/images/img_saly10.png"),
+                    image: "assets/images/langues.png"),
                 CourseItem(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const CourseDetailScreen()));
+                              builder: (context) => const Droit()));
                     },
-                    headline: "ORGANISATION",
-                    title: "COURS/TD\nTP",
+                    headline: "DROITS\nORGANISATION",
+                    title: "COURS\nTD",
                     startColor: 0xff9288e4,
                     endColor: 0xff534ea7,
-                    image: "assets/images/img_saly10.png"),
+                    image: "assets/images/droit.png"),
               ],
             ),
           ),

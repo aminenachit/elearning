@@ -15,7 +15,7 @@ class ChapterItemexpand extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 12),
+        padding: const EdgeInsets.only(bottom: 1),
         child: Container(
           height: 82,
           decoration: BoxDecoration(
@@ -41,7 +41,7 @@ class ChapterItemexpand extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      overflow: TextOverflow.ellipsis,
+                      overflow: TextOverflow.visible,
                       style: GoogleFonts.roboto(
                           fontSize: 18,
                           color: Colors.white,

@@ -34,12 +34,12 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 }*/
 
 /// Homepage
-class MyHomePage extends StatefulWidget {
+class Vidweb extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _VidwebState createState() => _VidwebState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _VidwebState extends State<Vidweb> {
   final List<String> _ids = [
     'kUMe1FH4CHE',
     'ft30zcMlFao',
@@ -181,21 +181,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   _space,
-                  _text('Title', _videoMetaData.title),
+                  _text('Titre', _videoMetaData.title),
                   _space,
-                  _text('Channel', _videoMetaData.author),
+                  _text('Chaine', _videoMetaData.author),
                   _space,
                   //_text('Video Id', _videoMetaData.videoId),
                   //_space,
                   Row(
                     children: [
                       _text(
-                        'Quality',
+                        'Qualité',
                         _controller.value.playbackQuality ?? '',
                       ),
                       const Spacer(),
                       _text(
-                        'Playback Rate',
+                        'Vitesse',
                         '${_controller.value.playbackRate}x  ',
                       ),
                     ],
@@ -315,7 +315,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                  _space,
                   /*AnimatedContainer(
                     duration: const Duration(milliseconds: 800),
                     decoration: BoxDecoration(

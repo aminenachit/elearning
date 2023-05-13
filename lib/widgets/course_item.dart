@@ -68,6 +68,8 @@ class CourseItem extends StatelessWidget {
                   child: Image.asset(
                     image,
                     scale: 2,
+                    height: 220,
+                    width: 220,
                   ))
             ],
           ),

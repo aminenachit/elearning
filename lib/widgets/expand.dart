@@ -52,7 +52,7 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFEB53A2),
+                    backgroundColor: Color(0xff9288e4),
                     padding:
                         EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                     shape: RoundedRectangleBorder(
@@ -71,7 +71,7 @@ class _ExpandableWidgetState extends State<ExpandableWidget> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFEB53A2),
+                    backgroundColor: Color(0xff9288e4),
                     padding:
                         EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                     shape: RoundedRectangleBorder(

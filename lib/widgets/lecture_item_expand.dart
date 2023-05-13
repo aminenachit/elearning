@@ -18,7 +18,7 @@ class LectureItemexpand extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 8),
+        padding: const EdgeInsets.only(bottom: 1),
         child: SizedBox(
           height: 134,
           child: Stack(
@@ -57,6 +57,7 @@ class LectureItemexpand extends StatelessWidget {
                           children: [
                             Text(
                               title,
+                              overflow: TextOverflow.visible,
                               style: GoogleFonts.roboto(
                                   fontSize: 18,
                                   color: Colors.white,
@@ -97,7 +98,7 @@ class LectureItemexpand extends StatelessWidget {
                   height: MediaQuery.of(context).size.width * 0.06,
                   width: MediaQuery.of(context).size.width * 0.06,
                   decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Color(0xFFEB53A2)),
+                      shape: BoxShape.circle, color: Color(0xff9288e4)),
                   child: const Icon(
                     Icons.play_arrow,
                     color: Colors.white,

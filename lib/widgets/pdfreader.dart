@@ -27,7 +27,7 @@ class _PDFReaderAppState extends State<PDFReaderApp> {
      showDialog(context: context,
          builder: (context){
        return AlertDialog(
-         title: Text('Enter page No to jump'),
+         title: Text('entrer numero de page'),
          content: TextField(
            controller: controller,
            keyboardType: TextInputType.number,
@@ -55,7 +55,7 @@ class _PDFReaderAppState extends State<PDFReaderApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('PDF Reader Example'),
+      appBar: AppBar(title: const Text('PDF Reader'),backgroundColor: const Color(0xff9288e4),
         actions: [
           IconButton(onPressed: (){
             pdfViewerController.previousPage();
