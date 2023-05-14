@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
+import 'package:elearning/widgets/empty_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:elearning/screeens/course_detail_screen.dart';
@@ -78,7 +79,7 @@ class _DroitState extends State<Droit> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => CourseDetailScreen()));
+                            builder: (context) => Empty()));
                   },
                 ),
                 SizedBox(
@@ -104,7 +105,7 @@ class _DroitState extends State<Droit> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Empty()));
                   },
                 ),
                 SizedBox(

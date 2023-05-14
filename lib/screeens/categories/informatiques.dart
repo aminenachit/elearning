@@ -1,5 +1,12 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
+import 'package:elearning/screeens/vidscreens/vidao.dart';
+import 'package:elearning/screeens/vidscreens/vidbd.dart';
+import 'package:elearning/screeens/vidscreens/vidbda.dart';
+import 'package:elearning/screeens/vidscreens/vidc.dart';
+import 'package:elearning/screeens/vidscreens/vidjava.dart';
+import 'package:elearning/screeens/vidscreens/vidri.dart';
+import 'package:elearning/screeens/vidscreens/vidse.dart';
 import 'package:elearning/widgets/pdfreader.dart';
 import 'package:elearning/screeens/pdfscreens/pdfweb.dart';
 import 'package:elearning/screeens/vidscreens/vidweb.dart';
@@ -94,7 +101,7 @@ class _InfoState extends State<Info> {
                   expandableContent: LectureItemexpand(
                       image: "assets/images/c1.svg",
                       title: 'Pr. R. EL AYACHI',
-                      duration: "60 heures",
+                      duration: "70 heures",
                       rating: 5.0),
                   onOption1Tap: () {
                     Navigator.push(
@@ -106,7 +113,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => Vidc()));
                   },
                 ),
                 SizedBox(
@@ -132,7 +139,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => Vidjava()));
                   },
                 ),
                 SizedBox(
@@ -141,7 +148,7 @@ class _InfoState extends State<Info> {
                 ExpandableWidget(
                   child: ChapterItemexpand(
                     image: "assets/images/bd1.png",
-                    title: "Systeme d'informations et base de donnees",
+                    title: "Systeme d'informations et base de données",
                   ),
                   expandableContent: LectureItemexpand(
                       image: "assets/images/bd1.png",
@@ -158,7 +165,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => Vidbd()));
                   },
                 ),
                 SizedBox(
@@ -185,7 +192,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => Vidao()));
                   },
                 ),
                 SizedBox(
@@ -211,7 +218,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => Vidse()));
                   },
                 ),
                 SizedBox(
@@ -237,7 +244,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => Vidbda()));
                   },
                 ),
                 SizedBox(
@@ -263,7 +270,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => Vidri()));
                   },
                 ),
                 SizedBox(
