@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-
 class Vidse extends StatefulWidget {
   @override
   _VidseState createState() => _VidseState();
@@ -14,10 +13,7 @@ class Vidse extends StatefulWidget {
 
 class _VidseState extends State<Vidse> {
   final List<String> _ids = [
-    'kUMe1FH4CHE',
-    'ft30zcMlFao',
-    'PkZNo7MFNFg',
-    'OK_JCtrrv-c',
+    'ROjZy1WbCIA',
   ];
   late YoutubePlayerController _controller;
   late TextEditingController _idController;
@@ -275,7 +271,6 @@ class _VidseState extends State<Vidse> {
   }
 
   Widget get _space => const SizedBox(height: 10);
-
 
   void _showSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(

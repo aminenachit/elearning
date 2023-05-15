@@ -14,10 +14,7 @@ class Vidri extends StatefulWidget {
 
 class _VidriState extends State<Vidri> {
   final List<String> _ids = [
-    'kUMe1FH4CHE',
-    'ft30zcMlFao',
-    'PkZNo7MFNFg',
-    'OK_JCtrrv-c',
+    '57p3kF2cR5M',
   ];
   late YoutubePlayerController _controller;
   late TextEditingController _idController;

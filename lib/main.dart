@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primaryColor: AppConstants.primaryColor,
             ),
-            home: const HomeScreen(),
+            home: HomeScreen(),
           );
         });
   }

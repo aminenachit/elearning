@@ -39,12 +39,24 @@ class _InfoState extends State<Info> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Section :",
-                  style: GoogleFonts.roboto(
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
+                Row(
+                  children: [
+                    FloatingActionButton(
+                        mini: true,
+                        backgroundColor: const Color(0xff9288e4),
+                        child: const Icon(
+                          Icons.arrow_back,size: 20,
+                        ),
+                        onPressed: () {Navigator.of(context).pop();}),
+                        SizedBox(width: 20,),
+                    Text(
+                      "Section :",
+                      style: GoogleFonts.roboto(
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 22,
@@ -110,10 +122,8 @@ class _InfoState extends State<Info> {
                             builder: (context) => const CourseDetailScreen()));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Vidc()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Vidc()));
                   },
                 ),
                 SizedBox(
@@ -136,10 +146,8 @@ class _InfoState extends State<Info> {
                             builder: (context) => const CourseDetailScreen()));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Vidjava()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Vidjava()));
                   },
                 ),
                 SizedBox(
@@ -162,10 +170,8 @@ class _InfoState extends State<Info> {
                             builder: (context) => const CourseDetailScreen()));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Vidbd()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Vidbd()));
                   },
                 ),
                 SizedBox(
@@ -189,10 +195,8 @@ class _InfoState extends State<Info> {
                             builder: (context) => const CourseDetailScreen()));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Vidao()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Vidao()));
                   },
                 ),
                 SizedBox(
@@ -215,10 +219,8 @@ class _InfoState extends State<Info> {
                             builder: (context) => const CourseDetailScreen()));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Vidse()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Vidse()));
                   },
                 ),
                 SizedBox(
@@ -241,10 +243,8 @@ class _InfoState extends State<Info> {
                             builder: (context) => const CourseDetailScreen()));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Vidbda()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Vidbda()));
                   },
                 ),
                 SizedBox(
@@ -267,10 +267,8 @@ class _InfoState extends State<Info> {
                             builder: (context) => const CourseDetailScreen()));
                   },
                   onOption2Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Vidri()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Vidri()));
                   },
                 ),
                 SizedBox(

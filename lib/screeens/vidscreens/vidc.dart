@@ -14,10 +14,9 @@ class Vidc extends StatefulWidget {
 
 class _VidcState extends State<Vidc> {
   final List<String> _ids = [
-    'kUMe1FH4CHE',
-    'ft30zcMlFao',
-    'PkZNo7MFNFg',
-    'OK_JCtrrv-c',
+    'KJgsSFOSQv0',
+    '8hly31xKli0',
+    'vLnPwxZdW4Y',
   ];
   late YoutubePlayerController _controller;
   late TextEditingController _idController;

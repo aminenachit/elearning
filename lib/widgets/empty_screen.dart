@@ -13,12 +13,24 @@ class _EmptyState extends State<Empty> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).primaryColor,
-        body: Center(
-          child: Text(
-            'Non disponible \npour le moment',
-            style: TextStyle(fontSize: 33, color: Colors.white70),
-          ),
-        ));
+      backgroundColor: Theme.of(context).primaryColor,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.asset(
+              'assets/images/non_disponible.png', // Remplacez le chemin par le chemin de votre image
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 20), // Espace vertical entre l'image et le texte
+            Text(
+              'indisponible pour le moment',
+              style: TextStyle(fontSize: 24, color: Colors.white70),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

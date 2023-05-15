@@ -15,9 +15,6 @@ class Vidal extends StatefulWidget {
 class _VidalState extends State<Vidal> {
   final List<String> _ids = [
     'kUMe1FH4CHE',
-    'ft30zcMlFao',
-    'PkZNo7MFNFg',
-    'OK_JCtrrv-c',
   ];
   late YoutubePlayerController _controller;
   late TextEditingController _idController;

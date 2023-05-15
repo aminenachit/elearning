@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
-import 'package:elearning/screeens/vidscreens/vidad.dart';
-import 'package:elearning/screeens/vidscreens/vidal.dart';
-import 'package:elearning/screeens/vidscreens/vidma.dart';
+import 'package:elearning/widgets/empty_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:elearning/screeens/course_detail_screen.dart';
@@ -81,7 +79,7 @@ class _MathState extends State<Math> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Vidad()));
+                            builder: (context) => Empty()));
                   },
                 ),
                 SizedBox(
@@ -107,7 +105,7 @@ class _MathState extends State<Math> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Vidal()));
+                            builder: (context) => Empty()));
                   },
                 ),
                 SizedBox(
@@ -133,7 +131,7 @@ class _MathState extends State<Math> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Vidma()));
+                            builder: (context) => Empty()));
                   },
                 ),
                 SizedBox(

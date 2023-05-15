@@ -15,9 +15,6 @@ class Vidad extends StatefulWidget {
 class _VidadState extends State<Vidad> {
   final List<String> _ids = [
     'kUMe1FH4CHE',
-    'ft30zcMlFao',
-    'PkZNo7MFNFg',
-    'OK_JCtrrv-c',
   ];
   late YoutubePlayerController _controller;
   late TextEditingController _idController;
