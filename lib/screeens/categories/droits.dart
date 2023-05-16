@@ -89,7 +89,7 @@ class _DroitState extends State<Droit> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const CourseDetailScreen(),
+                          builder: (context) => const Empty(),
                         ));
                   },
                   onOption2Tap: () {
@@ -114,7 +114,7 @@ class _DroitState extends State<Droit> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Empty()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,

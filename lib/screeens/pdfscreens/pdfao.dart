@@ -8,21 +8,21 @@ import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Pdfweb extends StatefulWidget {
-  const Pdfweb({super.key});
+class Pdfao extends StatefulWidget {
+  const Pdfao({super.key});
 
   @override
-  State<Pdfweb> createState() => _Pdfweb();
+  State<Pdfao> createState() => _Pdfao();
 }
 
-class _Pdfweb extends State<Pdfweb> {
+class _Pdfao extends State<Pdfao> {
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
 
   List<Map<String, dynamic>> pdfData = [];
 
   Future<String> uploadPdf(String fileName, File file) async {
     final reference =
-        FirebaseStorage.instance.ref().child('web/$fileName.pdf');
+        FirebaseStorage.instance.ref().child('ao/$fileName.pdf');
 
     UploadTask uploadTask = reference.putFile(file);
 
@@ -46,7 +46,7 @@ class _Pdfweb extends State<Pdfweb> {
 
       final downloadLink = await uploadPdf(fileName, file);
 
-      _firebaseFirestore.collection("web").add({
+      _firebaseFirestore.collection("ao").add({
         "name": fileName,
         "url": downloadLink,
       });
@@ -70,7 +70,7 @@ class _Pdfweb extends State<Pdfweb> {
   }
 
   void getAllPdf() async {
-    final results = await _firebaseFirestore.collection("web").get();
+    final results = await _firebaseFirestore.collection("ao").get();
 
     pdfData = results.docs.map((e) => e.data()).toList();
 

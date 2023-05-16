@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
+import 'package:elearning/screeens/pdfscreens/pdfad.dart';
+import 'package:elearning/screeens/pdfscreens/pdfal.dart';
+import 'package:elearning/screeens/pdfscreens/pdfma.dart';
 import 'package:elearning/widgets/empty_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -77,6 +80,28 @@ class _MathState extends State<Math> {
               children: <Widget>[
                 ExpandableWidget(
                   child: ChapterItemexpand(
+                    image: "assets/images/ma.png",
+                    title: "Mathématiques Appliquées",
+                  ),
+                  expandableContent: LectureItemexpand(
+                      image: "assets/images/ma.png",
+                      title: 'Pr.Abdelaziz Qaffou',
+                      duration: "50 heures",
+                      rating: 5.0),
+                  onOption1Tap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Pdfma()));
+                  },
+                  onOption2Tap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Empty()));
+                  },
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ExpandableWidget(
+                  child: ChapterItemexpand(
                     image: "assets/images/an.png",
                     title: "Analyse discrète",
                   ),
@@ -89,7 +114,7 @@ class _MathState extends State<Math> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const CourseDetailScreen(),
+                          builder: (context) => const Pdfad(),
                         ));
                   },
                   onOption2Tap: () {
@@ -111,40 +136,15 @@ class _MathState extends State<Math> {
                       duration: "30 heures",
                       rating: 5.0),
                   onOption1Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Pdfal()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Empty()));
                   },
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                ExpandableWidget(
-                  child: ChapterItemexpand(
-                    image: "assets/images/ma.png",
-                    title: "Mathématiques Appliquées",
-                  ),
-                  expandableContent: LectureItemexpand(
-                      image: "assets/images/ma.png",
-                      title: 'Pr.Abdelaziz Qaffou',
-                      duration: "50 heures",
-                      rating: 5.0),
-                  onOption1Tap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
-                  },
-                  onOption2Tap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Empty()));
-                  },
-                ),
+                
                 SizedBox(
                   height: 20,
                 ),

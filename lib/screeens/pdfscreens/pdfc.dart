@@ -8,21 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Pdfweb extends StatefulWidget {
-  const Pdfweb({super.key});
+class Pdfc extends StatefulWidget {
+  const Pdfc({super.key});
 
   @override
-  State<Pdfweb> createState() => _Pdfweb();
+  State<Pdfc> createState() => _Pdfc();
 }
 
-class _Pdfweb extends State<Pdfweb> {
+class _Pdfc extends State<Pdfc> {
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
 
   List<Map<String, dynamic>> pdfData = [];
 
   Future<String> uploadPdf(String fileName, File file) async {
-    final reference =
-        FirebaseStorage.instance.ref().child('web/$fileName.pdf');
+    final reference = FirebaseStorage.instance.ref().child('c/$fileName.pdf');
 
     UploadTask uploadTask = reference.putFile(file);
 
@@ -46,7 +45,7 @@ class _Pdfweb extends State<Pdfweb> {
 
       final downloadLink = await uploadPdf(fileName, file);
 
-      _firebaseFirestore.collection("web").add({
+      _firebaseFirestore.collection("c").add({
         "name": fileName,
         "url": downloadLink,
       });
@@ -70,7 +69,7 @@ class _Pdfweb extends State<Pdfweb> {
   }
 
   void getAllPdf() async {
-    final results = await _firebaseFirestore.collection("web").get();
+    final results = await _firebaseFirestore.collection("c").get();
 
     pdfData = results.docs.map((e) => e.data()).toList();
 
@@ -89,7 +88,7 @@ class _Pdfweb extends State<Pdfweb> {
       backgroundColor: AppConstants.primaryColor,
       appBar: AppBar(
         backgroundColor: const Color(0xff9288e4),
-        title: const Text("cours pdf"),
+        title: const Text("cours PDF"),
       ),
       body: ListView.builder(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -123,8 +122,8 @@ class _Pdfweb extends State<Pdfweb> {
                             color: const Color(0xff9288e4),
                             borderRadius: BorderRadius.circular(19),
                             image: const DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/pdflogo.png"))),
+                                image:
+                                    AssetImage("assets/images/pdflogo.png"))),
                       ),
                       Expanded(
                           child: Padding(

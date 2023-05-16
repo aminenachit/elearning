@@ -4,6 +4,8 @@ import 'package:elearning/constants/textStyle.dart';
 import 'package:elearning/screeens/categories/droits.dart';
 import 'package:elearning/screeens/categories/langues.dart';
 import 'package:elearning/screeens/categories/mathematiques.dart';
+import 'package:elearning/screeens/pdfscreens/pdfjava.dart';
+import 'package:elearning/screeens/pdfscreens/pdfma.dart';
 import 'package:elearning/screeens/qascreen.dart';
 import 'package:elearning/widgets/contacter.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +19,8 @@ import 'package:share_plus/share_plus.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'pdfscreens/pdfbda.dart';
+import 'pdfscreens/pdfc.dart';
 import 'user.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -68,6 +72,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           physics: const BouncingScrollPhysics(),
           children: [
+            const SizedBox(height: 10),
             Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,17 +83,17 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         fontSize: 36,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
-                  ),
+                  ),const SizedBox(height: 10,),
                   Text(
-                    "EST Beni-Mellal",
+                    "Choisir une catégorie :",
                     style: GoogleFonts.roboto(
-                        fontSize: 36,
+                        fontSize: 26,
                         color: Colors.white,
                         fontWeight: FontWeight.w500),
                   ),
                 ]),
             const SizedBox(
-              height: 22,
+              height: 15,
             ),
             SizedBox(
               height: 349,
@@ -162,7 +167,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Programme Genie informatique",
+                    "Programme Génie informatique",
                     style: GoogleFonts.roboto(
                         fontSize: 14,
                         color: const Color(0xff9c9a9a),
@@ -178,63 +183,50 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const CourseDetailScreen()));
+                              builder: (context) => const Pdfc()));
                     },
-                    image: "assets/images/img_saly24.png",
-                    title: 'est bm',
-                    duration: "8 heures",
-                    rating: 4.0),
+                    image: "assets/images/c1.svg",
+                    title: 'C, C++, Structure...',
+                    duration: "70 heures",
+                    rating: 5.0),
+                LectureItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Pdfjava()));
+                    },
+                    image: "assets/images/java1.png",
+                    title: 'Génie Logiciel',
+                    duration: "40 heures",
+                    rating: 5.0),
                 LectureItem(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const CourseDetailScreen()));
+                                  const Pdfbda()));
                     },
-                    image: "assets/images/img_saly24.png",
-                    title: 'est bm',
-                    duration: "8 heures",
-                    rating: 4.0),
+                    image: "assets/images/bda1.png",
+                    title: 'Réseaux Informatiques',
+                    duration: "40 heures",
+                    rating: 5.0),
                 LectureItem(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const CourseDetailScreen()));
+                                  const Pdfma()));
                     },
-                    image: "assets/images/img_saly24.png",
-                    title: 'est bm',
-                    duration: "8 heures",
-                    rating: 4.0),
-                LectureItem(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const CourseDetailScreen()));
-                    },
-                    image: "assets/images/img_saly24.png",
-                    title: 'est bm',
-                    duration: "8 heures",
-                    rating: 4.0),
-                LectureItem(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const CourseDetailScreen()));
-                    },
-                    image: "assets/images/img_saly24.png",
-                    title: 'est bm',
-                    duration: "8 heures",
-                    rating: 4.0),
+                    image: "assets/images/ma.png",
+                    title: 'Mathématiques',
+                    duration: "50 heures",
+                    rating: 5.0),
               ],
-            )
+            ),
+            const SizedBox(height: 10,)
           ],
         )),
       ),
@@ -278,8 +270,10 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               title: Text('user', style: Style.drawerTextStyle),
               leading: const Icon(Icons.account_box, color: Colors.white),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const UserScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const UserScreen()));
               },
             ),
           ],

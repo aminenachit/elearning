@@ -1,5 +1,12 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
+import 'package:elearning/screeens/pdfscreens/pdfao.dart';
+import 'package:elearning/screeens/pdfscreens/pdfbd.dart';
+import 'package:elearning/screeens/pdfscreens/pdfbda.dart';
+import 'package:elearning/screeens/pdfscreens/pdfc.dart';
+import 'package:elearning/screeens/pdfscreens/pdfjava.dart';
+import 'package:elearning/screeens/pdfscreens/pdfri.dart';
+import 'package:elearning/screeens/pdfscreens/pdfse.dart';
 import 'package:elearning/screeens/vidscreens/vidao.dart';
 import 'package:elearning/screeens/vidscreens/vidbd.dart';
 import 'package:elearning/screeens/vidscreens/vidbda.dart';
@@ -119,7 +126,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfc()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
@@ -143,7 +150,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfjava()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
@@ -167,7 +174,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfbd()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
@@ -192,7 +199,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfao()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
@@ -216,7 +223,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfse()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
@@ -240,7 +247,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfbda()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
@@ -264,7 +271,7 @@ class _InfoState extends State<Info> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfri()));
                   },
                   onOption2Tap: () {
                     Navigator.push(context,
@@ -272,7 +279,7 @@ class _InfoState extends State<Info> {
                   },
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 50,
                 ),
               ],
             ),

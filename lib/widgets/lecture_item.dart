@@ -60,6 +60,7 @@ class LectureItem extends StatelessWidget {
                           children: [
                             Text(
                               title,
+                              overflow: TextOverflow.fade,
                               style: GoogleFonts.roboto(
                                   fontSize: 18,
                                   color: Colors.white,
@@ -100,7 +101,7 @@ class LectureItem extends StatelessWidget {
                   height: MediaQuery.of(context).size.width * 0.06,
                   width: MediaQuery.of(context).size.width * 0.06,
                   decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Color(0xFFEB53A2)),
+                      shape: BoxShape.circle, color: Color(0xff534ea7)),
                   child: const Icon(
                     Icons.play_arrow,
                     color: Colors.white,

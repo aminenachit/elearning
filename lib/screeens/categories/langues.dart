@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
+import 'package:elearning/screeens/pdfscreens/pdfang.dart';
 import 'package:elearning/widgets/empty_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -111,7 +112,7 @@ class _LanState extends State<Lan> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
+                            builder: (context) => const Pdfang()));
                   },
                   onOption2Tap: () {
                     Navigator.push(

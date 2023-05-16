@@ -8,6 +8,7 @@ import 'package:elearning/auth/forget_pass.dart';
 import 'package:elearning/screeens/loading_manager.dart';
 import 'package:elearning/auth/global_methods.dart';
 import 'package:elearning/widgets/text_widget.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../auth/login.dart';
@@ -137,7 +138,99 @@ class _UserScreenState extends State<UserScreen> {
                       textSize: 18,
                       // isTitle: true,
                     ),
-                    const SizedBox(
+                    
+                    const SizedBox(height: 30),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 112.5,
+                            child: Stack(
+                              children: [
+                                Positioned(
+                                  child: Container(
+                                    height: 45,
+                                    width: 45,
+                                    decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/images/img_user1.png"))),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 22.5,
+                                  child: Container(
+                                    height: 45,
+                                    width: 45,
+                                    decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/images/img_user2.png"))),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 45,
+                                  child: Container(
+                                    height: 45,
+                                    width: 45,
+                                    decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/images/img_user3.png"))),
+                                  ),
+                                ),
+                                Positioned(
+                                  left: 67.5,
+                                  child: Container(
+                                    height: 45,
+                                    width: 45,
+                                    decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                "assets/images/img_user4.png"))),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 12,
+                          ),
+                          Text(
+                            '6 membres',
+                            style: GoogleFonts.roboto(
+                                fontSize: 18,
+                                color: const Color(0xFFCACACA),
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        height: 47,
+                        width: 54,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            color: const Color(0XFF353567)),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 12, horizontal: 15),
+                          child:
+                              SvgPicture.asset("assets/images/icon_like.svg"),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
                       height: 20,
                     ),
                     const Divider(
