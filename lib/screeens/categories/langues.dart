@@ -29,12 +29,24 @@ class _LanState extends State<Lan> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Section :",
-                  style: GoogleFonts.roboto(
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
+                Row(
+                  children: [
+                    FloatingActionButton(
+                        mini: true,
+                        backgroundColor: const Color(0xff9288e4),
+                        child: const Icon(
+                          Icons.arrow_back,size: 20,
+                        ),
+                        onPressed: () {Navigator.of(context).pop();}),
+                        SizedBox(width: 20,),
+                    Text(
+                      "Section :",
+                      style: GoogleFonts.roboto(
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 22,

@@ -47,10 +47,17 @@ dependencies:
   shrink_sidemenu: ^2.0.0+2-null-safety
   carousel_slider: ^4.1.1
   url_launcher: ^6.1.5
+  flutter_spinkit: ^5.2.0
+  fluttertoast: ^8.2.1
+  card_swiper: ^2.0.4
+  flutter_iconly: ^1.0.2
+  shared_preferences: ^2.1.0
   #firebase
   firebase_core: ^2.11.0
   firebase_storage: ^11.1.2
   cloud_firestore: ^4.7.0
+  google_sign_in: ^6.1.0
+  firebase_auth: ^4.4.2
 
 dev_dependencies:
   flutter_test:

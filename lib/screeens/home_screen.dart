@@ -17,6 +17,8 @@ import 'package:share_plus/share_plus.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'user.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   HomeScreenState createState() {
@@ -261,7 +263,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             ListTile(
               title: Text('Contacter', style: Style.drawerTextStyle),
-              leading: const Icon(Icons.contact_phone, color: Colors.white),
+              leading: const Icon(Icons.phone, color: Colors.white),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const Contacter()));
@@ -271,6 +273,14 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               title: Text('Suggestions', style: Style.drawerTextStyle),
               leading: const Icon(Icons.email, color: Colors.white),
               onTap: () => _launchgmail(),
+            ),
+            ListTile(
+              title: Text('user', style: Style.drawerTextStyle),
+              leading: const Icon(Icons.account_box, color: Colors.white),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const UserScreen()));
+              },
             ),
           ],
         ));

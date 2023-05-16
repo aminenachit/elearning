@@ -3,6 +3,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:elearning/constants/app_constants.dart';
 
+import 'auth/forget_pass.dart';
+import 'auth/login.dart';
+import 'auth/register.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -34,13 +38,18 @@ class MyApp extends StatelessWidget {
             );
           }
           return MaterialApp(
-            title: 'Flutter Demo',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              primaryColor: AppConstants.primaryColor,
-            ),
-            home: HomeScreen(),
-          );
+              title: 'Flutter Demo',
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData(
+                primaryColor: AppConstants.primaryColor,
+              ),
+              home: HomeScreen(),
+              routes: {
+                RegisterScreen.routeName: (ctx) => const RegisterScreen(),
+                LoginScreen.routeName: (ctx) => const LoginScreen(),
+                ForgetPasswordScreen.routeName: (ctx) =>
+                    const ForgetPasswordScreen(),
+              });
         });
   }
 }
