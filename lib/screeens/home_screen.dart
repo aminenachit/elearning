@@ -5,6 +5,7 @@ import 'package:elearning/screeens/categories/droits.dart';
 import 'package:elearning/screeens/categories/langues.dart';
 import 'package:elearning/screeens/categories/mathematiques.dart';
 import 'package:elearning/screeens/qascreen.dart';
+import 'package:elearning/widgets/contacter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:elearning/constants/app_constants.dart';
@@ -15,7 +16,6 @@ import 'package:elearning/widgets/lecture_item.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -58,182 +58,188 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           title: Text(
             'MGHILA',
             style: GoogleFonts.roboto(
-                      fontSize: 22,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
+                fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
         body: SafeArea(
-          child: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        physics: const BouncingScrollPhysics(),
-        children: [
-          Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Mghila",
-                  style: GoogleFonts.roboto(
-                      fontSize: 36,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "EST Beni-Mellal",
-                  style: GoogleFonts.roboto(
-                      fontSize: 36,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500),
-                ),
-              ]),
-          const SizedBox(
-            height: 22,
-          ),
-          SizedBox(
-            height: 349,
             child: ListView(
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              children: <Widget>[
-                CourseItem(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Info()));
-                    },
-                    headline: "INFORMATIQUE",
-                    title: "COURS/TD\nTP",
-                    startColor: 0xff9288e4,
-                    endColor: 0xff534ea7,
-                    image: "assets/images/info.png"),
-                CourseItem(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Math()));
-                    },
-                    headline: "MATHEMATIQUES",
-                    title: "COURS/TD\nTP",
-                    startColor: 0xff9288e4,
-                    endColor: 0xff534ea7,
-                    image: "assets/images/math.png"),
-                CourseItem(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const Lan()));
-                    },
-                    headline: "LANGUES",
-                    title: "COURS/TD\nTP",
-                    startColor: 0xff9288e4,
-                    endColor: 0xff534ea7,
-                    image: "assets/images/langues.png"),
-                CourseItem(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Droit()));
-                    },
-                    headline: "DROITS\nORGANISATION",
-                    title: "COURS\nTD",
-                    startColor: 0xff9288e4,
-                    endColor: 0xff534ea7,
-                    image: "assets/images/droit.png"),
-              ],
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          physics: const BouncingScrollPhysics(),
+          children: [
+            Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Mghila",
+                    style: GoogleFonts.roboto(
+                        fontSize: 36,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "EST Beni-Mellal",
+                    style: GoogleFonts.roboto(
+                        fontSize: 36,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ]),
+            const SizedBox(
+              height: 22,
             ),
-          ),
-          const SizedBox(
-            height: 34,
-          ),
-          Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Cours gratuits",
-                  style: GoogleFonts.roboto(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "Programme Genie informatique",
-                  style: GoogleFonts.roboto(
-                      fontSize: 14,
-                      color: const Color(0xff9c9a9a),
-                      fontWeight: FontWeight.w500),
-                ),
-              ]),
-          ListView(
-            scrollDirection: Axis.vertical,
-            shrinkWrap: true,
-            children: <Widget>[
-              LectureItem(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
-                  },
-                  image: "assets/images/img_saly24.png",
-                  title: 'est bm',
-                  duration: "8 heures",
-                  rating: 4.0),
-              LectureItem(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
-                  },
-                  image: "assets/images/img_saly24.png",
-                  title: 'est bm',
-                  duration: "8 heures",
-                  rating: 4.0),
-              LectureItem(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
-                  },
-                  image: "assets/images/img_saly24.png",
-                  title: 'est bm',
-                  duration: "8 heures",
-                  rating: 4.0),
-              LectureItem(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
-                  },
-                  image: "assets/images/img_saly24.png",
-                  title: 'est bm',
-                  duration: "8 heures",
-                  rating: 4.0),
-              LectureItem(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const CourseDetailScreen()));
-                  },
-                  image: "assets/images/img_saly24.png",
-                  title: 'est bm',
-                  duration: "8 heures",
-                  rating: 4.0),
-            ],
-          )
-        ],
-      )),
+            SizedBox(
+              height: 349,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
+                children: <Widget>[
+                  CourseItem(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Info()));
+                      },
+                      headline: "INFORMATIQUE",
+                      title: "COURS/TD\nTP",
+                      startColor: 0xff9288e4,
+                      endColor: 0xff534ea7,
+                      image: "assets/images/info.png"),
+                  CourseItem(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Math()));
+                      },
+                      headline: "MATHEMATIQUES",
+                      title: "COURS/TD\nTP",
+                      startColor: 0xff9288e4,
+                      endColor: 0xff534ea7,
+                      image: "assets/images/math.png"),
+                  CourseItem(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Lan()));
+                      },
+                      headline: "LANGUES",
+                      title: "COURS/TD\nTP",
+                      startColor: 0xff9288e4,
+                      endColor: 0xff534ea7,
+                      image: "assets/images/langues.png"),
+                  CourseItem(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Droit()));
+                      },
+                      headline: "DROITS\nORGANISATION",
+                      title: "COURS\nTD",
+                      startColor: 0xff9288e4,
+                      endColor: 0xff534ea7,
+                      image: "assets/images/droit.png"),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 34,
+            ),
+            Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Cours gratuits",
+                    style: GoogleFonts.roboto(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "Programme Genie informatique",
+                    style: GoogleFonts.roboto(
+                        fontSize: 14,
+                        color: const Color(0xff9c9a9a),
+                        fontWeight: FontWeight.w500),
+                  ),
+                ]),
+            ListView(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              children: <Widget>[
+                LectureItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const CourseDetailScreen()));
+                    },
+                    image: "assets/images/img_saly24.png",
+                    title: 'est bm',
+                    duration: "8 heures",
+                    rating: 4.0),
+                LectureItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const CourseDetailScreen()));
+                    },
+                    image: "assets/images/img_saly24.png",
+                    title: 'est bm',
+                    duration: "8 heures",
+                    rating: 4.0),
+                LectureItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const CourseDetailScreen()));
+                    },
+                    image: "assets/images/img_saly24.png",
+                    title: 'est bm',
+                    duration: "8 heures",
+                    rating: 4.0),
+                LectureItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const CourseDetailScreen()));
+                    },
+                    image: "assets/images/img_saly24.png",
+                    title: 'est bm',
+                    duration: "8 heures",
+                    rating: 4.0),
+                LectureItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const CourseDetailScreen()));
+                    },
+                    image: "assets/images/img_saly24.png",
+                    title: 'est bm',
+                    duration: "8 heures",
+                    rating: 4.0),
+              ],
+            )
+          ],
+        )),
       ),
     );
   }
-buildMenu() {
+
+  buildMenu() {
     return SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 50.0),
         child: Column(
@@ -243,22 +249,29 @@ buildMenu() {
             ListTile(
               title: Text('Q & A', style: Style.drawerTextStyle),
               leading: const Icon(Icons.question_answer, color: Colors.white),
-              onTap: () {Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Home()));},
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home()));
+              },
             ),
             ListTile(
-              title: Text('Share the App', style: Style.drawerTextStyle),
+              title: Text('Partager l\'app', style: Style.drawerTextStyle),
               leading: const Icon(Icons.share, color: Colors.white),
               onTap: () => _sharer(),
             ),
             ListTile(
+              title: Text('Contacter', style: Style.drawerTextStyle),
+              leading: const Icon(Icons.contact_phone, color: Colors.white),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Contacter()));
+              },
+            ),
+            ListTile(
               title: Text('Suggestions', style: Style.drawerTextStyle),
-              leading: const Icon(Icons.bug_report, color: Colors.white),
+              leading: const Icon(Icons.email, color: Colors.white),
               onTap: () => _launchgmail(),
             ),
-            
           ],
         ));
   }
@@ -267,8 +280,7 @@ buildMenu() {
     Share.share("Mghila - Enhance your knowledge.\n" +
         "The app that will make you an amazing student\n"
             "Are you ready?\n"
-            "Download it now\n"
-            );
+            "Download it now\n");
   }
 
   _launchgmail() async {

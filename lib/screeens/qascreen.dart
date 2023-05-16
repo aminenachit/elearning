@@ -110,41 +110,4 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
       Image.asset('assets/image/card2.png'),
     ],
   );
-
-  buildMenu() {
-    return SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(vertical: 50.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            ListTile(
-              title: Text('Share the App', style: Style.drawerTextStyle),
-              leading: const Icon(Icons.share, color: Colors.white),
-              onTap: () => _sharer(),
-            ),
-            ListTile(
-              title: Text('Suggestions', style: Style.drawerTextStyle),
-              leading: const Icon(Icons.bug_report, color: Colors.white),
-              onTap: () => _launchgmail(),
-            ),
-          ],
-        ));
-  }
-
-  _sharer() {
-    Share.share("Skills 101/TOUGHEST - Test your knowledge.\n" +
-        "The app that will make you an amazing candidate for any job.\n"
-            "Are you ready?\n"
-            "Download it now\n"
-            "https://play.google.com/store/apps/details?id=tricky.questions");
-  }
-
-  _launchgmail() async {
-    final Uri _url = Uri.parse(
-        'mailto:indiancoder001@gmail.com?subject=Feedback&body=Feedback for Toughest');
-    if (!await launchUrl(_url)) {
-      throw 'Could not launch $_url';
-    }
-  }
 }
