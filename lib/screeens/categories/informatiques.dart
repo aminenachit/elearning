@@ -14,15 +14,12 @@ import 'package:elearning/screeens/vidscreens/vidc.dart';
 import 'package:elearning/screeens/vidscreens/vidjava.dart';
 import 'package:elearning/screeens/vidscreens/vidri.dart';
 import 'package:elearning/screeens/vidscreens/vidse.dart';
-import 'package:elearning/widgets/pdfreader.dart';
 import 'package:elearning/screeens/pdfscreens/pdfweb.dart';
 import 'package:elearning/screeens/vidscreens/vidweb.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:elearning/screeens/course_detail_screen.dart';
 import 'package:elearning/widgets/chapter_item_expand.dart';
 import 'package:elearning/widgets/expand.dart';
-import 'package:elearning/widgets/lecture_item.dart';
 import 'package:elearning/widgets/lecture_item_expand.dart';
 
 class Info extends StatefulWidget {

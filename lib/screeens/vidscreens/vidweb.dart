@@ -152,7 +152,7 @@ class _VidwebState extends State<Vidweb> {
           leading: Padding(
             padding: const EdgeInsets.only(left: 12.0),
             child: Image.asset(
-              'assets/images/2web.png',
+              'assets/images/1web.png',
               fit: BoxFit.fitWidth,
             ),
           ),

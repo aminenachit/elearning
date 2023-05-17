@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:elearning/screeens/course_detail_screen.dart';
 
 class CourseItem extends StatelessWidget {
   const CourseItem(

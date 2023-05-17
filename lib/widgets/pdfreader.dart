@@ -1,5 +1,4 @@
 
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -27,7 +26,7 @@ class _PDFReaderAppState extends State<PDFReaderApp> {
      showDialog(context: context,
          builder: (context){
        return AlertDialog(
-         title: Text('entrer numero de page'),
+         title: const Text('entrer numero de page'),
          content: TextField(
            controller: controller,
            keyboardType: TextInputType.number,
@@ -41,11 +40,11 @@ class _PDFReaderAppState extends State<PDFReaderApp> {
         actions: [
           ElevatedButton(onPressed: (){
             Navigator.pop(context);
-          }, child: Text('Cancel')),
+          }, child: const Text('Cancel')),
           TextButton(onPressed: (){
             pdfViewerController.jumpToPage(pageNo);
             Navigator.pop(context);
-          }, child: Text('OK'))
+          }, child: const Text('OK'))
         ],
        );
 
@@ -59,13 +58,13 @@ class _PDFReaderAppState extends State<PDFReaderApp> {
         actions: [
           IconButton(onPressed: (){
             pdfViewerController.previousPage();
-          }, icon: Icon(Icons.arrow_back_ios)),
+          }, icon: const Icon(Icons.arrow_back_ios)),
           IconButton(onPressed: (){
             pdfViewerController.nextPage();
-          }, icon: Icon(Icons.arrow_forward_ios)),
+          }, icon: const Icon(Icons.arrow_forward_ios)),
           IconButton(onPressed: (){
             jumpTo(context);
-          }, icon: Icon(Icons.search))
+          }, icon: const Icon(Icons.search))
         ],
       ),
       body: SfPdfViewer.network(widget.pdfUrl,
@@ -76,10 +75,10 @@ class _PDFReaderAppState extends State<PDFReaderApp> {
           IconButton(onPressed: (){
             pdfViewerController.zoomLevel= zoom+1;
             zoom++;
-          }, icon: Icon(Icons.zoom_in)),
+          }, icon: const Icon(Icons.zoom_in)),
           IconButton(onPressed: (){
                pdfViewerController.zoomLevel=0.0;
-          }, icon: Icon(Icons.zoom_out))
+          }, icon: const Icon(Icons.zoom_out))
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

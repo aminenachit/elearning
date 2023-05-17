@@ -67,7 +67,7 @@ class LectureItemexpand extends StatelessWidget {
                               duration,
                               style: GoogleFonts.roboto(
                                   fontSize: 12,
-                                  color: Color(0xff8c8c8c),
+                                  color: const Color(0xff8c8c8c),
                                   fontWeight: FontWeight.w400),
                             ),
                             RatingBar.builder(

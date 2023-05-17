@@ -1,10 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:share_plus/share_plus.dart';
 import 'package:elearning/constants/textStyle.dart';
 import 'package:elearning/q%20&%20a/ui/detail.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -24,7 +22,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
       appBar: AppBar(
           elevation: 10.0,
           centerTitle: true,
-          backgroundColor: Color(0xff9288e4),
+          backgroundColor: const Color(0xff9288e4),
           leading: GestureDetector(
             child: const Icon(
               Icons.arrow_back,
@@ -51,12 +49,12 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
               height: height / 2.5,
               child: myCarousel,
             ),
-            getListItems(Color(0xFFF1B136), Icons.person, 'Behavioural Based'),
-            getListItems(Color(0xFF885F7F), Icons.wc, 'Communications Based'),
-            getListItems(Color(0xFF13B0A5), Icons.call_split, 'Opinion Based'),
+            getListItems(const Color(0xFFF1B136), Icons.person, 'Behavioural Based'),
+            getListItems(const Color(0xFF885F7F), Icons.wc, 'Communications Based'),
+            getListItems(const Color(0xFF13B0A5), Icons.call_split, 'Opinion Based'),
             getListItems(
-                Color(0xFFD0C490), Icons.assessment, 'Performance Based'),
-            getListItems(Color(0xFFEF6363), Icons.help_outline, 'Brainteasers'),
+                const Color(0xFFD0C490), Icons.assessment, 'Performance Based'),
+            getListItems(const Color(0xFFEF6363), Icons.help_outline, 'Brainteasers'),
           ],
         ),
     );

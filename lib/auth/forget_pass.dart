@@ -1,7 +1,6 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:elearning/constants/firebase_consts.dart';
 import 'package:elearning/screeens/loading_manager.dart';

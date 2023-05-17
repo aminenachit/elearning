@@ -1,10 +1,7 @@
 class Constss {
-  
   static List<String> authImagesPaths = [
-    'assets/images/img_saly20.png',
-    'assets/images/img_saly24.png',
-    'assets/images/img_saly25.png',
-    'assets/images/img_saly36.png',
-    'assets/images/img_saly36_detail.png',
+    'assets/images/l2.png',
+    'assets/images/l3.png',
+    'assets/images/l1.png',
   ];
 }

@@ -9,7 +9,7 @@ class ShowDetail extends StatefulWidget {
   final String quest, ans;
   static var randomNumber = Random();
 
-  ShowDetail({required this.quest, required this.ans});
+  const ShowDetail({required this.quest, required this.ans});
 
   static final List<Color> _colors = [
     Colors.red,
@@ -58,9 +58,9 @@ class ShowDetailState extends State<ShowDetail> with TickerProviderStateMixin {
     return Stack(
       children: <Widget>[
         Container(
-            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
             decoration: BoxDecoration(
-              boxShadow: <BoxShadow>[
+              boxShadow: const <BoxShadow>[
                 BoxShadow(
                   color: Colors.black12,
                   blurRadius: 10.0,
@@ -71,7 +71,7 @@ class ShowDetailState extends State<ShowDetail> with TickerProviderStateMixin {
               color: ShowDetail._colors[ShowDetail.randomNumber.nextInt(100) %
                   ShowDetail._colors.length],
             ),
-            margin: EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
             child: Text(
               text,
               style: Style.commonTextStyle,
@@ -85,21 +85,21 @@ class ShowDetailState extends State<ShowDetail> with TickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         elevation: 10.0,
-        backgroundColor: Color(0xFFC67A7D),
-        title: Text('Answer'),
+        backgroundColor: const Color(0xFFC67A7D),
+        title: const Text('Answer'),
       ),
       body: ListView(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         children: <Widget>[
           Container(
-            margin: EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(8.0),
             child: Text(
               "Question :",
               style: Style.headerTextStyle,
             ),
           ),
           cardDetail(widget.quest),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
           Container(
@@ -128,9 +128,9 @@ class ShowDetailState extends State<ShowDetail> with TickerProviderStateMixin {
               },
             ),
           ]),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           MyElevatedButton(
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             shape: BeveledRectangleBorder(
               borderRadius: new BorderRadius.circular(5.0),
             ),
@@ -143,16 +143,16 @@ class ShowDetailState extends State<ShowDetail> with TickerProviderStateMixin {
                   "Share answer with your friends",
                   style: Style.regularTextStyle,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
-                Icon(Icons.share),
+                const Icon(Icons.share),
               ],
             ),
-            color: Color(0xFF56cfdf),
+            color: const Color(0xFF56cfdf),
             onPressed: () => share(widget.quest, widget.ans),
           ),
-          SizedBox(height: 20.0),
+          const SizedBox(height: 20.0),
         ],
       ),
     );

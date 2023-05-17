@@ -16,7 +16,7 @@ class Detail extends StatelessWidget {
       appBar: AppBar(
           elevation: 20.0,
           backgroundColor: new Color(0xFFC67A7D),
-          title: Text('Questions')),
+          title: const Text('Questions')),
       body: Flex(
         direction: Axis.vertical,
         children: <Widget>[
@@ -121,7 +121,7 @@ class Detail extends StatelessWidget {
                       style: Style.commonTextStyle,
                     ),
                     trailing: IconButton(
-                      icon: Icon(Icons.share, color: Color(0xFF56cfdf)),
+                      icon: const Icon(Icons.share, color: Color(0xFF56cfdf)),
                       iconSize: 18.0,
                       onPressed: () => share(quest),
                     ),
@@ -133,8 +133,8 @@ class Detail extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      padding: EdgeInsets.only(left: 15, right: 15),
-                      child: Divider(
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      child: const Divider(
                         color: Colors.white,
                       )),
                 ],

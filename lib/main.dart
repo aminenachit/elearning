@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
             );
           }
           return MaterialApp(
-              title: 'Flutter Demo',
+              title: 'SkillShare',
               debugShowCheckedModeBanner: false,
               theme: ThemeData(
                 primaryColor: AppConstants.primaryColor,

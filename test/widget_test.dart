@@ -19,7 +19,7 @@ void main() {
 testWidgets('Checking showDetail page', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(
-        MaterialApp(home: ShowDetail(quest: 'my question', ans: 'my answer')));
+        const MaterialApp(home: ShowDetail(quest: 'my question', ans: 'my answer')));
     List<String> expectedText = [
       'Question :',
       'my question',

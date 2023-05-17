@@ -12,13 +12,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:elearning/constants/app_constants.dart';
 import 'package:elearning/screeens/categories/informatiques.dart';
-import 'package:elearning/screeens/course_detail_screen.dart';
 import 'package:elearning/widgets/course_item.dart';
 import 'package:elearning/widgets/lecture_item.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../widgets/apropos.dart';
 import 'pdfscreens/pdfbda.dart';
 import 'pdfscreens/pdfc.dart';
 import 'user.dart';
@@ -44,29 +44,28 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       child: Scaffold(
         backgroundColor: AppConstants.primaryColor,
         appBar: AppBar(
-          elevation: 10.0,
-          centerTitle: true,
-          backgroundColor: const Color(0xff9288e4),
-          leading: GestureDetector(
-            child: const Icon(
-              Icons.menu,
-              color: Colors.black,
+            elevation: 10.0,
+            centerTitle: true,
+            backgroundColor: const Color(0xff9288e4),
+            leading: GestureDetector(
+              child: const Icon(
+                Icons.menu,
+                color: Colors.black,
+              ),
+              onTap: () {
+                final _state = _sideMenuKey.currentState!;
+                if (_state.isOpened) {
+                  _state.closeSideMenu();
+                } else {
+                  _state.openSideMenu();
+                }
+              },
             ),
-            onTap: () {
-              final _state = _sideMenuKey.currentState!;
-              if (_state.isOpened) {
-                _state.closeSideMenu();
-              } else {
-                _state.openSideMenu();
-              }
-            },
-          ),
-          title: Text(
-            'MGHILA',
-            style: GoogleFonts.roboto(
-                fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
+            title: Image.asset(
+              "assets/images/logoclean1amine.png",
+              height: 150,
+              width: 200,
+            )),
         body: SafeArea(
             child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -78,12 +77,15 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Mghila",
+                    "SkillShare",
                     style: GoogleFonts.roboto(
                         fontSize: 36,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
-                  ),const SizedBox(height: 10,),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Text(
                     "Choisir une catégorie :",
                     style: GoogleFonts.roboto(
@@ -205,8 +207,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const Pdfbda()));
+                              builder: (context) => const Pdfbda()));
                     },
                     image: "assets/images/bda1.png",
                     title: 'Réseaux Informatiques',
@@ -217,8 +218,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const Pdfma()));
+                              builder: (context) => const Pdfma()));
                     },
                     image: "assets/images/ma.png",
                     title: 'Mathématiques',
@@ -226,7 +226,9 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     rating: 5.0),
               ],
             ),
-            const SizedBox(height: 10,)
+            const SizedBox(
+              height: 10,
+            )
           ],
         )),
       ),
@@ -249,6 +251,16 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               },
             ),
             ListTile(
+              title: Text('Utilisateur', style: Style.drawerTextStyle),
+              leading: const Icon(Icons.account_box, color: Colors.white),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const UserScreen()));
+              },
+            ),
+            ListTile(
               title: Text('Partager l\'app', style: Style.drawerTextStyle),
               leading: const Icon(Icons.share, color: Colors.white),
               onTap: () => _sharer(),
@@ -267,13 +279,11 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               onTap: () => _launchgmail(),
             ),
             ListTile(
-              title: Text('user', style: Style.drawerTextStyle),
-              leading: const Icon(Icons.account_box, color: Colors.white),
+              title: Text('A propos', style: Style.drawerTextStyle),
+              leading: const Icon(Icons.info, color: Colors.white),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const UserScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Apropos()));
               },
             ),
           ],

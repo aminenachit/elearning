@@ -4,7 +4,6 @@ import 'package:elearning/screeens/pdfscreens/pdfang.dart';
 import 'package:elearning/widgets/empty_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:elearning/screeens/course_detail_screen.dart';
 import 'package:elearning/widgets/chapter_item_expand.dart';
 import 'package:elearning/widgets/expand.dart';
 import 'package:elearning/widgets/lecture_item_expand.dart';

@@ -38,19 +38,19 @@ class _PasswordDialogState extends State<PasswordDialog> {
       content: TextField(
         controller: _passwordController,
         obscureText: true,
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           hintText: 'Mot de passe',
         ),
       ),
       actions: <Widget>[
         TextButton(
-          child: Text('Annuler'),
+          child: const Text('Annuler'),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
         TextButton(
-          child: Text('Valider'),
+          child: const Text('Valider'),
           onPressed: () {
             String password = _passwordController.text;
             if (password == 'amine') {
@@ -60,11 +60,11 @@ class _PasswordDialogState extends State<PasswordDialog> {
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    title: Text('Mot de passe incorrect'),
-                    content: Text('Veuillez réessayer.'),
+                    title: const Text('Mot de passe incorrect'),
+                    content: const Text('Veuillez réessayer.'),
                     actions: <Widget>[
                       TextButton(
-                        child: Text('OK'),
+                        child: const Text('OK'),
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
